@@ -1,16 +1,17 @@
-# music_robot
+## musicbot
 
-A new Flutter project.
+A new Flutter musicbot that listens and plays any music genre.
 
-## Getting Started
+# Features
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+- VelocityX UI design
+- Riverpod Flutter
+- RestAPI
+- MVVM Model
+- Audioplayer
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Contribution
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Have any contributions? Fork it improve it contact me @ noblefelix4@gmail.com
+
