@@ -1,6 +1,6 @@
 ## musicbot
 
-A new Flutter musicbot that listens and plays ay music genre.
+A new Flutter musicbot that listens and plays any music genre.
 
 # Features
 
