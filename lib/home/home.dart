@@ -50,48 +50,53 @@ class _HomeScreenState extends State<HomeScreen> {
           centerTitle: true,
         ).h(100).p16(),
         VxSwiper.builder(
-          enlargeCenterPage:  ,
+            enlargeCenterPage: true,
             itemCount: mySongs.length,
             aspectRatio: 1.0,
             itemBuilder: (context, index) {
               final mxc = mySongs[index];
 
-              return VxBox(child: ZStack([
-                //content of each song containder
+              return VxBox(
+                      child: ZStack(
+                [
+                  //content of each song containder
 
-                Positioned(
-                  top: 0.0,
-                  left: 0.0,
-                  child: VxBox(
-                    child: mxc.category.text.semiBold.white.xl3.make(),
-                  ).clip().px16.make(),
-
-                ),
-
-                Align(
-                  alignment: Alignment.topCenter,
-                  child: VStack(
-                    [
-                       mxc.name.text.xl3.white.bold.make(),
-                       5.heightBox,
-                       mxc.tagline.text.xl4.white.semiBold.make()
-                  ],
-                    crossAlignment:CrossAxisAlignment.center,
+                  Positioned(
+                    top: 0.0,
+                    left: 0.0,
+                    child: VxBox(
+                      child: mxc.category.text.semiBold.white.xl.make(),
+                    ).px16.make(),
                   ),
-                ),
 
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: [
-                    Icon(CupertinoIcons.play_circle,color: Colors.white,size: 30.0,),
-                    5.heightBox,
-                    "Double tap to play".text.semiBold.xl4.white.make()
-                  ].vStack())
-                  
-              ], )
-                  .clip(Clip.antiAlias)
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: VStack(
+                      [
+                        mxc.name.text.xl3.white.bold.make(),
+                        5.heightBox,
+                        mxc.tagline.text.xl4.white.semiBold.make()
+                      ],
+                      crossAlignment: CrossAxisAlignment.center,
+                    ),
+                  ),
+
+                  Align(
+                      alignment: Alignment.bottomCenter,
+                      child: [
+                        Icon(
+                          CupertinoIcons.play_circle,
+                          color: Colors.white,
+                          size: 30.0,
+                        ),
+                        5.heightBox,
+                        "Double tap to play".text.semiBold.xl.white.make()
+                      ].vStack())
+                ],
               )
-                  .clip(Clip.antiAlias)
+                      // .clip(Clip.antiAlias)
+                      )
+                  // .clip(Clip.antiAlias)
                   .bgImage(DecorationImage(
                       image: NetworkImage(mxc.image),
                       fit: BoxFit.cover,
@@ -100,14 +105,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   .withRounded(value: 14)
                   .make()
                   .centered()
-                  .onInkDoubleTap(() { })
+                  .onInkDoubleTap(() {})
                   .p16();
             }),
-      ],
-            fit:StackFit.expand
-      
-      
-      ),
+      ], fit: StackFit.expand),
     );
   }
 }
