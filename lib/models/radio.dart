@@ -1,9 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
-
 class MusicList {
-  List<Music> radios;
+  final List<Music> radios;
   MusicList({
     this.radios,
   });
@@ -24,7 +23,8 @@ class MusicList {
 
   factory MusicList.fromMap(Map<String, dynamic> map) {
     if (map == null) return null;
-        return MusicList(
+
+    return MusicList(
       radios: List<Music>.from(map['radios']?.map((x) => Music.fromMap(x))),
     );
   }
@@ -35,7 +35,7 @@ class MusicList {
       MusicList.fromMap(json.decode(source));
 
   @override
-  String toString() => 'MusicList(radios: $radios)';
+  String toString() => 'MyRadioList(radios: $radios)';
 
   @override
   bool operator ==(Object o) {
